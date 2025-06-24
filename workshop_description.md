@@ -34,7 +34,7 @@ They can also be added to your [b]Half-Life Alyx\game\hlvr\cfg\skill.cfg[/b] fil
 
 [h2]Source Code[/h2]
 
-GitHub: 
+GitHub: https://github.com/FrostSource/removable_health_vials
 
 [h2]Known Issues[/h2]
 
