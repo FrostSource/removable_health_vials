@@ -6,5 +6,27 @@ if IsServer() then
     require("alyxlib.init")
 
     -- execute code or load mod libraries here
+    RemovableHealthVialStation = require "removable_health_vials.health_station"
 
+    GlobalPrecache("model", "models/props_combine/health_charger/health_vial_hologram.vmdl")
+
+    -- Convert all existing health stations to removable ones
+    ListenToPlayerEvent("player_activate", function()
+        for _, station in ipairs(Entities:FindAllByClassname("item_healthcharger")) do
+            -- No stations should be removable on map start
+            -- no need to suppress warnings
+            ConvertHealthStationToRemovable(station)
+        end
+    end)
+
+    ListenToGameEvent("health_station_open", function(params)
+        for _, station in ipairs(Entities:FindAllByClassnameWithin("item_healthcharger", Player:GetOrigin(), 1024)) do
+            -- Suppress warning by double checking the class
+            -- this is a normal event, we don't want to spam the console
+            if not isinstance(station, "RemovableHealthVialStation") then
+                devprint("Converting new health station to removable: " .. station:GetDebugName())
+                ConvertHealthStationToRemovable(station)
+            end
+        end
+    end, nil)
 end
