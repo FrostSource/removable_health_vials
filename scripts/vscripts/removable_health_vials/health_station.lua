@@ -3,7 +3,7 @@
 
 local version = "v1.0.0"
 
-RegisterAlyxLibAddon("Removable Health Vials", version, "", "removable_vials", "v2.0.0")
+RegisterAlyxLibAddon("Removable Health Vials", version, "3527754624", "removable_vials", "v2.0.0")
 
 EasyConvars:RegisterConvar("close_health_station_on_vial_removal", "0", "If set to 1, the station will close up when the vial is removed")
 EasyConvars:SetPersistent("close_health_station_on_vial_removal", true)
