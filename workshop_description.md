@@ -10,7 +10,7 @@ The addon allows you to take any health vial out of a health station no matter h
 
 Works in any map.
 
-[i]This addon require [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3329679071]AlyxLib[/url] to work.[/i]
+[i]This addon requires [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3329679071]AlyxLib[/url] to work.[/i]
 
 [h2]Console Commands[/h2]
 
